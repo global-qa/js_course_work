@@ -1,0 +1,30 @@
+{
+  "name": "ng-e2e",
+  "version": "1.0.0",
+  "description": "This is a Restful service testing framework using Supertest and Mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha specs/* --opts ./mocha.opts --grep NG:",
+    "e2e-dev-jenkins": "mocha specs/* --opts ./mocha.opts --reporter mocha-allure-reporter --grep NG:",
+    "e2e-staging-jenkins": "ENV=staging mocha specs/* --opts ./mocha.opts --reporter mocha-allure-reporter --grep NG:",
+    "e2e-master-jenkins": "ENV=master mocha specs/* --opts ./mocha.opts --reporter mocha-allure-reporter --grep NG:",
+    "allure:site": "allure generate --clean"
+  },
+  "mocha": {},
+  "devDependencies": {
+    "mocha": "^6.2.2",
+    "superagent": "^5.1.0",
+    "superagent-retry": "^0.6.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.13.0",
+    "chai": "^4.2.0",
+    "mocha-allure-reporter": "^1.4.0",
+    "mocha-testrail-reporter": "^1.0.12",
+    "sleep": "^6.1.0",
+    "superagent-retry-delay": "^2.3.0",
+    "testrail-api": "^1.3.5",
+    "request": "^2.88.0"
+  }
+}
