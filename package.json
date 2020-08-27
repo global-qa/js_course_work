@@ -4,7 +4,7 @@
   "description": "This is a Restful service testing framework using Supertest and Mocha",
   "main": "specs/courseWork.spec.js",
   "scripts": {
-    "test": "mocha specs/*"
+    "test": "mocha specs/* --timeout 20000 --slow 1500"
   },
   "mocha": {},
   "devDependencies": {
